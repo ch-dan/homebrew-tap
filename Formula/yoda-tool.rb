@@ -3,20 +3,25 @@ require_relative "../custom_download_strategy"
 class YodaTool < Formula
   desc ""
   homepage ""
-  version "1.0.8"
+  version "1.0.10"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/ch-dan/yoda/releases/download/v1.0.8/yoda_1.0.8_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "11d8798bdd17c23d945ee5030620e02974b0534f55b81cfeeadf8c37fb6f84e8"
+    url "https://github.com/ch-dan/yoda/releases/download/v1.0.10/yoda_1.0.10_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "808de3dee08fe5e68b11ec39d44ec020b6d1930ce369edf3ac09fb0f5c49d611"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/ch-dan/yoda/releases/download/v1.0.8/yoda_1.0.8_Linux_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "bad2fdc62018b785efbd31db90dd6de4bbc27dae0e27b6ab9caf485cae31d0f2"
+      url "https://github.com/ch-dan/yoda/releases/download/v1.0.10/yoda_1.0.10_Linux_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "3f7c468866ceffee732d2a7c053966290df9aeb2f8a657cdc81a57e3b4bde2c1"
     end
   end
 
   def install
     bin.install "yoda"
+  end
+
+  def caveats; <<~EOS
+    Requires multipass cask installed to function
+  EOS
   end
 end
