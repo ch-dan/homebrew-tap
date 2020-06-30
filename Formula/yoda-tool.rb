@@ -3,16 +3,16 @@ require_relative "../custom_download_strategy"
 class YodaTool < Formula
   desc ""
   homepage ""
-  version "1.0.19"
+  version "1.1.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/ch-dan/yoda/releases/download/v1.0.19/yoda_1.0.19_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "56b9578ab0d92021c03ec36e0ac56e5d6ee7811b56ffe9c0bc0420aa6bde30c3"
+    url "https://github.com/ch-dan/yoda/releases/download/v1.1.1/yoda_1.1.1_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "8c59768476a2ab8bcf7932d0d5ee4d7db432cbcccf1a6ba5c2fd6022f5a41c5f"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/ch-dan/yoda/releases/download/v1.0.19/yoda_1.0.19_Linux_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "a85ea5249461ed6752e28e922debb0c3c0c30dcb8f0da5f2401731a18cb8e446"
+      url "https://github.com/ch-dan/yoda/releases/download/v1.1.1/yoda_1.1.1_Linux_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "1d2e9f3cf36ca41c33379f24af49a46a19266c00179c233579b2922bd8b00444"
     end
   end
 
